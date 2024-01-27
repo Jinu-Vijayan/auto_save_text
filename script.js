@@ -17,19 +17,14 @@ function onloadHandler(){
 }
 
 /**************************************************************************
- saveData function will save the text written in the text area to the local storage with a debounce of 1sec
+ saveData function will save the text written in the text area to the local storage 
 
  @return none
 ***************************************************************************/
 
 function saveData(){
 
-    clearTimeout(timer);
-    
-    timer = setTimeout(()=>{
-        localStorage.setItem("savedText",TEXT_AREA.value);
-    },1000)
-
+    localStorage.setItem("savedText",TEXT_AREA.value);
 }
 
 document.addEventListener("DOMContentLoaded",onloadHandler);
